@@ -13,7 +13,7 @@ const CustomCardStyled = styled(Card)(({ theme }) => ({
   alignItems: "center",
   padding: theme.spacing(2),
   boxSizing: "border-box",
-  border: "1px solid",
+  border: "2px solid",
   borderColor: "var(--border-color)",
   borderRadius: "10px",
   boxShadow: "none",
