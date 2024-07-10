@@ -7,7 +7,7 @@ interface CustomCardProps {
 
 const CustomCardStyled = styled(Card)(({ theme }) => ({
   width: "100%",
-  minHeight: 137,
+  maxHeight: 137,
   margin: "16px auto",
   display: "flex",
   alignItems: "center",

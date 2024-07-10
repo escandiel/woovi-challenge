@@ -1,3 +1,4 @@
+import PaymentOptionList from "../../components/PaymentOptionList";
 import PaymentOptionCard from "../../components/ui/PaymentOptionCard";
 import Title from "../../components/ui/Title";
 import data from "../../mocks/db.json";
@@ -19,6 +20,7 @@ const PaymentMethod = () => {
         highlight={firstInstallment.highlight}
         highlightValue={firstInstallment.highlightValue}
       />
+      <PaymentOptionList />
     </>
   );
 };
