@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { FormControlLabel, Box } from "@mui/material";
 import TopLabel from "../TopLabel";
 import CustomCard from "../CustomCard";
@@ -34,19 +34,17 @@ const PaymentOptionCard: React.FC<PaymentOptionCardProps> = ({
   useListCard,
   showLabel,
   label,
+  checked,
   onChange,
 }) => {
-  const [isChecked, setIsChecked] = useState(false);
-
   const handleCheckboxChange = (checked: boolean) => {
-    setIsChecked(checked);
     if (onChange) onChange(checked);
   };
 
   const CardComponent = useListCard ? ListCard : CustomCard;
 
   return (
-    <CardComponent className={isChecked ? "checked" : ""}>
+    <CardComponent className={checked ? "checked" : ""}>
       {showLabel && <TopLabel label={label || "Pix"} />}
       <FormControlLabel
         label={
@@ -84,7 +82,7 @@ const PaymentOptionCard: React.FC<PaymentOptionCardProps> = ({
           </Box>
         }
         control={
-          <CustomCheckbox checked={isChecked} onChange={handleCheckboxChange} />
+          <CustomCheckbox checked={checked} onChange={handleCheckboxChange} />
         }
         sx={{
           flexDirection: "row-reverse",
