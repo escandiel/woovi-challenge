@@ -1,5 +1,5 @@
 import React from "react";
-import { FormControlLabel, Box } from "@mui/material";
+import { FormControlLabel } from "@mui/material";
 import TopLabel from "../TopLabel";
 import CustomCard from "../CustomCard";
 import ListCard from "../ListCard";
@@ -48,7 +48,7 @@ const PaymentOptionCard: React.FC<PaymentOptionCardProps> = ({
       {showLabel && <TopLabel label={label || "Pix"} />}
       <FormControlLabel
         label={
-          <Box>
+          <div>
             <div className="flex-start label-monetary">
               <span className="label-monetary-text label-installments">
                 {installments}
@@ -74,12 +74,12 @@ const PaymentOptionCard: React.FC<PaymentOptionCardProps> = ({
               )}
               {highlight && highlightValue && (
                 <div className="highlight-container">
-                  <span className="label-highlight-value">{`🤑 ${highlightValue}`}</span>
+                  <span className="label-highlight-value">{` ${highlightValue}`}</span>
                   <span className="label-highlight">{highlight}</span>
                 </div>
               )}
             </div>
-          </Box>
+          </div>
         }
         control={
           <CustomCheckbox checked={checked} onChange={handleCheckboxChange} />

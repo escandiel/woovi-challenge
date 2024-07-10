@@ -11,25 +11,25 @@
         "benefitPercentage": "3% ",
         "benefitPrefix": "Ganhe ",
         "highlight": "de volta no seu Pix na hora",
-        "highlightValue": "R$ 300,00 "
+        "highlightValue": "🤑 R$ 300,00 "
       },
       {
         "id": 2,
         "label": "2x",
         "paymentInstallment": "R$ 15.300,00",
-        "amount": "R$ 30.600,00"
+        "amount": "Total: R$ 30.600,00"
       },
       {
         "id": 3,
         "label": "3x",
         "paymentInstallment": "R$ 10.196,66",
-        "amount": "R$ 30.620,00"
+        "amount": "Total: R$ 30.620,00"
       },
       {
         "id": 4,
         "label": "4x",
         "paymentInstallment": "R$ 7.725,00",
-        "amount": "R$ 30.900,00 ",
+        "amount": "Total: R$ 30.900,00 ",
         "highlight": "Melhor opção de parcelamento",
         "highlightValue": "-3% de juros: "
       },
@@ -37,19 +37,19 @@
         "id": 5,
         "label": "5x",
         "paymentInstallment": "R$ 6.300,00",
-        "amount": "R$ 31.500,00"
+        "amount": "Total: R$ 31.500,00"
       },
       {
         "id": 6,
         "label": "6x",
         "paymentInstallment": "R$ 5.283,33",
-        "amount": "R$ 31.699,98"
+        "amount": "Total: R$ 31.699,98"
       },
       {
         "id": 7,
         "label": "7x",
         "paymentInstallment": "R$ 4.542,85",
-        "amount": "R$ 31.800,00"
+        "amount": "Total: R$ 31.800,00"
       }
     ]
   }

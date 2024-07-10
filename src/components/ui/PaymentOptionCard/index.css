@@ -38,8 +38,25 @@
 .highlight-container {
   background-color: var(--tertiary-color);
   color: #fff;
-  padding: 4px 8px;
+  padding: 4px 30px 4px 8px;
   border-radius: 4px;
+  position: relative;
+
+  &::after {
+    content: "teste";
+    background-color: white;
+    padding: 4px;
+    position: absolute;
+    right: -32px;
+    top: 4px;
+    transform: rotate(45deg);
+  }
+}
+
+@media (max-width: 464px) {
+  .highlight-container::after {
+    top: 16px;
+  }
 }
 
 .label-highlight {
@@ -56,4 +73,9 @@
 .checked {
   border-color: var(--secondary-color) !important;
   background-color: rgba(3, 214, 157, 0.04) !important;
+}
+
+.MuiButtonBase-root {
+  position: relative;
+  top: -20px;
 }
