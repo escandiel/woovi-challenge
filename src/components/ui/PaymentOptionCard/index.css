@@ -10,10 +10,10 @@
 }
 
 .label-installments {
-  font-weight: 800;
+  font-weight: var(--font-extra-bold);
 }
 .label-value {
-  font-weight: 600;
+  font-weight: var(--font-semi-bold);
 }
 
 .benefit-container {
@@ -28,11 +28,11 @@
 }
 
 .label-benefit {
-  font-weight: 600;
+  font-weight: var(--font-semi-bold);
 }
 
 .label-benefit-percentage {
-  font-weight: 800;
+  font-weight: var(--font-extra-bold);
 }
 
 .highlight-container {
@@ -50,5 +50,5 @@
 }
 
 .label-highlight-value {
-  font-weight: 800;
+  font-weight: var(--font-extra-bold);
 }

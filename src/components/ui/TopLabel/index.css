@@ -6,6 +6,7 @@
   padding: 0 18px;
   font-size: 0.875rem;
   color: var(--primary-color);
+  font-weight: var(--font-extra-bold);
   background: var(--border-color);
   border-radius: 20px;
 }
