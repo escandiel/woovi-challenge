@@ -1,0 +1,15 @@
+.payment-option-list {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.payment-option-item:not(:last-child) {
+  border-bottom: 1px solid var(--border-color);
+}
+
+.payment-option-item {
+  display: flex;
+}
