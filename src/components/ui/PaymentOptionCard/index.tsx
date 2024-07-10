@@ -1,8 +1,9 @@
 import React from "react";
-import { Typography, Checkbox, FormControlLabel } from "@mui/material";
+import { FormControlLabel } from "@mui/material";
 import TopLabel from "../TopLabel";
 import CustomCard from "../CustomCard";
 import "./index.css";
+import CustomCheckbox from "../CustomCheckbox";
 
 interface PaymentOptionCardProps {
   installments: string;
@@ -51,7 +52,7 @@ const PaymentOptionCard: React.FC<PaymentOptionCardProps> = ({
             </div>
           </div>
         }
-        control={<Checkbox checked={checked} onChange={onChange} />}
+        control={<CustomCheckbox checked={checked} onChange={onChange} />}
         sx={{
           flexDirection: "row-reverse",
           justifyContent: "space-between",
