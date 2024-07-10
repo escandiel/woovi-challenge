@@ -18,10 +18,12 @@ const PaymentMethod = () => {
   const handleCheckboxChange = (id: number | null, checked: boolean) => {
     setCheckedItem(checked ? id : null);
     if (checked) {
+      const selectedPayment =
+        id === 0 ? firstInstallment : installments.find((i) => i.id === id);
       setLoading(true);
       setTimeout(() => {
         setLoading(false);
-        navigate("/confirm-payment");
+        navigate("/confirm-payment", { state: { payment: selectedPayment } });
       }, 2000);
     }
   };
