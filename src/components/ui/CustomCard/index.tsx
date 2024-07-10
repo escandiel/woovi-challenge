@@ -3,6 +3,7 @@ import { Card, styled } from "@mui/material";
 
 interface CustomCardProps {
   children: React.ReactNode;
+  className?: string;
 }
 
 const CustomCardStyled = styled(Card)(({ theme }) => ({
@@ -21,8 +22,8 @@ const CustomCardStyled = styled(Card)(({ theme }) => ({
   overflow: "visible",
 }));
 
-const CustomCard: React.FC<CustomCardProps> = ({ children }) => {
-  return <CustomCardStyled className="card">{children}</CustomCardStyled>;
+const CustomCard: React.FC<CustomCardProps> = ({ children, className }) => {
+  return <CustomCardStyled className={className}>{children}</CustomCardStyled>;
 };
 
 export default CustomCard;

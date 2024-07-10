@@ -2,18 +2,12 @@
   margin: 0 0 32px 0;
 }
 
-.payment-option-card {
-  position: relative;
-  margin: 16px 0;
-  padding-top: 24px;
-}
-
-.payment-option-card-container {
-  position: relative;
-}
-
 .payment-option-card .top-label {
   max-width: fit-content;
   z-index: 2;
-  top: 30px;
+  top: 14px;
+}
+
+.payment-option-card-container .MuiPaper-root {
+  margin: 0 0 40px 0;
 }

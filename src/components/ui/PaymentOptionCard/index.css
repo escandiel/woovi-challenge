@@ -52,3 +52,8 @@
 .label-highlight-value {
   font-weight: var(--font-extra-bold);
 }
+
+.checked {
+  border-color: var(--secondary-color) !important;
+  background-color: rgba(3, 214, 157, 0.06) !important;
+}

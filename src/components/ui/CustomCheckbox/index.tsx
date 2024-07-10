@@ -14,19 +14,25 @@ const StyledRadioButtonUncheckedIcon = styled(RadioButtonUncheckedIcon)({
 
 interface CustomCheckboxProps {
   checked?: boolean;
-  onChange?: () => void;
+  onChange?: (checked: boolean) => void;
 }
 
 const CustomCheckbox: React.FC<CustomCheckboxProps> = ({
   checked,
   onChange,
 }) => {
+  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    if (onChange) {
+      onChange(event.target.checked);
+    }
+  };
+
   return (
     <Checkbox
       icon={<StyledRadioButtonUncheckedIcon />}
       checkedIcon={<StyledCheckCircleIcon />}
       checked={checked}
-      onChange={onChange}
+      onChange={handleChange}
     />
   );
 };
