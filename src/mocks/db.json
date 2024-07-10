@@ -1,0 +1,45 @@
+{
+  "paymentMethods": {
+    "id": 1,
+    "name": "Pix",
+    "installments": [
+      {
+        "id": 1,
+        "label": "1x",
+        "amount": "R$ 30.500,00",
+        "benefit": "Ganhe 3% de Cashback",
+        "highlight": "🤑 R$ 300,00 de volta no seu Pix na hora"
+      },
+      {
+        "id": 2,
+        "label": "2x",
+        "amount": "R$ 18.250,00"
+      },
+      {
+        "id": 3,
+        "label": "3x",
+        "amount": "R$ 12.167,00"
+      },
+      {
+        "id": 4,
+        "label": "4x",
+        "amount": "R$ 9.125,00"
+      },
+      {
+        "id": 5,
+        "label": "5x",
+        "amount": "R$ 7.300,00"
+      },
+      {
+        "id": 6,
+        "label": "6x",
+        "amount": "R$ 6.083,33"
+      },
+      {
+        "id": 7,
+        "label": "7x",
+        "amount": "R$ 5.214,29"
+      }
+    ]
+  }
+}
