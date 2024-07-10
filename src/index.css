@@ -1,7 +1,8 @@
 :root {
   --primary-font: "Nunito", sans-serif;
+  --primary-color: #4d4d4d;
   --secondary-color: #03d69d;
-  --text-color: #4d4d4d;
+  --tertiary-color: #133a6f;
   --border-color: #e5e5e5;
 }
 

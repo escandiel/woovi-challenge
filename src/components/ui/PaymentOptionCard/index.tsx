@@ -33,7 +33,7 @@ const PaymentOptionCard: React.FC<PaymentOptionCardProps> = ({
             </div>
             <div className="flex-column">
               <span className="label-benefit">{`${benefit} `}</span>
-              <span>{`${highlight} `}</span>
+              <span className="label-highlight">{`${highlight} `}</span>
             </div>
           </div>
         }
