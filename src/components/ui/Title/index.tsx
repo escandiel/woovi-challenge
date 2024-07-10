@@ -1,4 +1,4 @@
-import "./Title.css";
+import "./index.css";
 
 interface TitleProps {
   text: string;

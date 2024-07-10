@@ -1,7 +1,11 @@
 import Title from "../../components/ui/Title";
 
 const PaymentMethod = () => {
-  <Title text="olá mundo" />;
+  return (
+    <div>
+      <Title text="Olá mundo" />
+    </div>
+  );
 };
 
 export default PaymentMethod;
