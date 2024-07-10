@@ -1,5 +1,6 @@
 :root {
   --primary-font: "Nunito", sans-serif;
+  --secondary-color: #03d69d;
   --text-color: #4d4d4d;
   --border-color: #e5e5e5;
 }
@@ -18,4 +19,9 @@ body {
   display: flex;
   justify-content: start;
   align-items: center;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
 }

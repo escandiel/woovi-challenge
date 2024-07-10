@@ -31,9 +31,10 @@ const PaymentOptionCard: React.FC<PaymentOptionCardProps> = ({
               <span className="label-monetary-text label-installments">{`${installments}`}</span>
               <span className="label-monetary-text label-value">{`${value}`}</span>
             </div>
-
-            <Typography variant="h6">{`${benefit} `}</Typography>
-            <Typography variant="h6">{`${highlight} `}</Typography>
+            <div className="flex-column">
+              <span className="label-benefit">{`${benefit} `}</span>
+              <span>{`${highlight} `}</span>
+            </div>
           </div>
         }
         control={<Checkbox checked={checked} onChange={onChange} />}
