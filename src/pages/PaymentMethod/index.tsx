@@ -2,8 +2,8 @@ import Title from "../../components/ui/Title";
 
 const PaymentMethod = () => {
   return (
-    <div>
-      <Title text="Olá mundo" />
+    <div className="flex-center title-container">
+      <Title text="João, como você quer pagar?" />
     </div>
   );
 };
