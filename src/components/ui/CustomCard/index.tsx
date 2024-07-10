@@ -15,6 +15,7 @@ const CustomCardStyled = styled(Card)(({ theme }) => ({
   boxSizing: "border-box",
   border: "1px solid",
   borderColor: "var(--border-color)",
+  borderRadius: "10px",
   boxShadow: "none",
   position: "relative",
   overflow: "visible",
