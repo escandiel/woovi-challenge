@@ -4,14 +4,21 @@ import Title from "../../components/ui/Title";
 import TopLabel from "../../components/ui/TopLabel";
 import data from "../../mocks/db.json";
 import "./index.css";
+import { useNavigate } from "react-router-dom";
 
 const PaymentMethod = () => {
   const firstInstallment = data.paymentMethods.installments[0];
   const installments = data.paymentMethods.installments.slice(1);
   const [checkedItem, setCheckedItem] = useState<number | null>(null);
+  const navigate = useNavigate();
 
   const handleCheckboxChange = (id: number | null, checked: boolean) => {
     setCheckedItem(checked ? id : null);
+    if (checked) {
+      setTimeout(() => {
+        navigate("/confirm-payment");
+      }, 2000);
+    }
   };
 
   return (
