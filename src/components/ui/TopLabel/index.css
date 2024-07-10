@@ -1,0 +1,11 @@
+.top-label {
+  position: absolute;
+  top: -10px;
+  left: 16px;
+  background-color: #fff;
+  padding: 0 18px;
+  font-size: 0.875rem;
+  color: var(--text-color);
+  background: var(--border-color);
+  border-radius: 20px;
+}

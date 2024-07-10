@@ -5,7 +5,11 @@ const PaymentMethod = () => {
   return (
     <div className="flex-center title-container">
       <Title text="João, como você quer pagar?" />
-      <PaymentOptionCard primaryText="1x de 35mil" secondaryText="teste" />
+      <PaymentOptionCard
+        primaryText="1x de 35mil"
+        secondaryText="teste"
+        label="pix"
+      />
     </div>
   );
 };

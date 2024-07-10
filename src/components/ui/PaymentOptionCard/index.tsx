@@ -7,6 +7,7 @@ import {
   Box,
 } from "@mui/material";
 import { styled } from "@mui/material/styles";
+import TopLabel from "../TopLabel";
 
 const CustomCard = styled(Card)(({ theme }) => ({
   width: 430,
@@ -19,6 +20,8 @@ const CustomCard = styled(Card)(({ theme }) => ({
   border: "1px solid",
   borderColor: "var(--border-color)",
   boxShadow: "none",
+  position: "relative",
+  overflow: "visible",
 }));
 
 interface PaymentOptionCardProps {
@@ -36,6 +39,7 @@ const PaymentOptionCard: React.FC<PaymentOptionCardProps> = ({
 }) => {
   return (
     <CustomCard>
+      <TopLabel label="Pix"></TopLabel>
       <FormControlLabel
         label={
           <Box>
