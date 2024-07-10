@@ -34,7 +34,7 @@ const PaymentOptionList = () => {
 
   return (
     <div className="payment-option-list">
-      <TopLabel label="Pix" />
+      <TopLabel label="Pix Parcelado" />
       {installments.map((installment) => (
         <div key={installment.id} className="payment-option-item">
           <PaymentOptionCard

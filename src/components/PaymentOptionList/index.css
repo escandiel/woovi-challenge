@@ -3,7 +3,7 @@
   flex-direction: column;
   border: 1px solid var(--border-color);
   border-radius: 8px;
-  overflow: hidden;
+  overflow: visible;
 }
 
 .payment-option-item:not(:last-child) {
@@ -12,4 +12,11 @@
 
 .payment-option-item {
   display: flex;
+}
+
+.payment-option-list .top-label {
+  position: relative;
+  bottom: 8px;
+  max-width: fit-content;
+  font-size: 18px;
 }

@@ -3,6 +3,7 @@ import PaymentOptionCard from "../../components/ui/PaymentOptionCard";
 import Title from "../../components/ui/Title";
 import TopLabel from "../../components/ui/TopLabel";
 import data from "../../mocks/db.json";
+import "./index.css";
 
 const PaymentMethod = () => {
   const firstInstallment = data.paymentMethods.installments[0];
@@ -13,15 +14,20 @@ const PaymentMethod = () => {
         <Title text="João, como você quer pagar?" />
       </div>
 
-      <PaymentOptionCard
-        installments={firstInstallment.label}
-        paymentInstallment={firstInstallment.paymentInstallment}
-        benefitPrefix={firstInstallment.benefitPrefix}
-        benefitPercentage={firstInstallment.benefitPercentage}
-        benefitSuffix={firstInstallment.benefitSuffix}
-        highlight={firstInstallment.highlight}
-        highlightValue={firstInstallment.highlightValue}
-      />
+      <div className="payment-option-card">
+        <div className="payment-option-card-container">
+          <TopLabel label="Pix" />
+          <PaymentOptionCard
+            installments={firstInstallment.label}
+            paymentInstallment={firstInstallment.paymentInstallment}
+            benefitPrefix={firstInstallment.benefitPrefix}
+            benefitPercentage={firstInstallment.benefitPercentage}
+            benefitSuffix={firstInstallment.benefitSuffix}
+            highlight={firstInstallment.highlight}
+            highlightValue={firstInstallment.highlightValue}
+          />
+        </div>
+      </div>
       <PaymentOptionList />
     </>
   );

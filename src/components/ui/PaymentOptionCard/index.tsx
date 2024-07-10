@@ -175,6 +175,8 @@ interface PaymentOptionCardProps {
   checked?: boolean;
   onChange?: () => void;
   useListCard?: boolean;
+  showLabel?: boolean;
+  label?: string;
 }
 
 const PaymentOptionCard: React.FC<PaymentOptionCardProps> = ({
@@ -189,12 +191,15 @@ const PaymentOptionCard: React.FC<PaymentOptionCardProps> = ({
   highlight,
   highlightValue,
   useListCard,
+  showLabel,
+  label,
 }) => {
   const CardComponent = useListCard ? ListCard : CustomCard;
 
   return (
     <CardComponent>
       {/* <TopLabel label="Pix" /> */}
+      {showLabel && <TopLabel label={label || "Pix"} />}{" "}
       <FormControlLabel
         label={
           <Box>
