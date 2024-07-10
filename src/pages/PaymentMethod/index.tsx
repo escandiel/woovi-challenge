@@ -1,6 +1,6 @@
 import PaymentOptionCard from "../../components/ui/PaymentOptionCard";
 import Title from "../../components/ui/Title";
-import data from "../../data/db.json";
+import data from "../../mocks/db.json";
 
 const PaymentMethod = () => {
   const firstInstallment = data.paymentMethods.installments[0];
