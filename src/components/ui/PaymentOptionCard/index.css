@@ -1,15 +1,17 @@
-.custom-card {
-  width: 430px;
-  height: 128px;
-  margin: 16px auto;
-  display: flex;
-  align-items: center;
-  padding: 16px;
-  box-sizing: border-box;
+.label-monetary {
+  gap: 8px;
 }
 
-.label-container {
-  display: flex;
-  flex-direction: row-reverse;
-  align-items: center;
+.label-monetary-text {
+  color: var(--text-color);
+  font-family: var(--primary-font);
+  font-size: 24px;
+  line-height: 32.74px;
+}
+
+.label-installments {
+  font-weight: 800;
+}
+.label-value {
+  font-weight: 600;
 }

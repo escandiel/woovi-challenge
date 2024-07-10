@@ -1,7 +1,8 @@
 import React from "react";
-import { Typography, Checkbox, FormControlLabel, Box } from "@mui/material";
+import { Typography, Checkbox, FormControlLabel } from "@mui/material";
 import TopLabel from "../TopLabel";
 import CustomCard from "../CustomCard";
+import "./index.css";
 
 interface PaymentOptionCardProps {
   installments: string;
@@ -25,11 +26,15 @@ const PaymentOptionCard: React.FC<PaymentOptionCardProps> = ({
       <TopLabel label="Pix"></TopLabel>
       <FormControlLabel
         label={
-          <Box>
-            <Typography variant="h6">{`${installments} ${value}`}</Typography>
+          <div>
+            <div className="flex-start label-monetary">
+              <span className="label-monetary-text label-installments">{`${installments}`}</span>
+              <span className="label-monetary-text label-value">{`${value}`}</span>
+            </div>
+
             <Typography variant="h6">{`${benefit} `}</Typography>
             <Typography variant="h6">{`${highlight} `}</Typography>
-          </Box>
+          </div>
         }
         control={<Checkbox checked={checked} onChange={onChange} />}
         sx={{
