@@ -11,7 +11,7 @@ const PaymentOptionList = () => {
           key={installment.id}
           installments={installment.label}
           amount={installment.amount}
-          value={installment.amount}
+          paymentInstallment={installment.paymentInstallment}
           benefitPrefix={installment.benefitPrefix || ""}
           benefitPercentage={installment.benefitPercentage || ""}
           benefitSuffix={installment.benefitSuffix || ""}
