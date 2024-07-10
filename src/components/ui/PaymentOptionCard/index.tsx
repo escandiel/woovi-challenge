@@ -1,28 +1,7 @@
 import React from "react";
-import {
-  Card,
-  Typography,
-  Checkbox,
-  FormControlLabel,
-  Box,
-} from "@mui/material";
-import { styled } from "@mui/material/styles";
+import { Typography, Checkbox, FormControlLabel, Box } from "@mui/material";
 import TopLabel from "../TopLabel";
-
-const CustomCard = styled(Card)(({ theme }) => ({
-  width: 430,
-  height: 128,
-  margin: "16px auto",
-  display: "flex",
-  alignItems: "center",
-  padding: theme.spacing(2),
-  boxSizing: "border-box",
-  border: "1px solid",
-  borderColor: "var(--border-color)",
-  boxShadow: "none",
-  position: "relative",
-  overflow: "visible",
-}));
+import CustomCard from "../CustomCard";
 
 interface PaymentOptionCardProps {
   primaryText: string;
@@ -48,7 +27,12 @@ const PaymentOptionCard: React.FC<PaymentOptionCardProps> = ({
           </Box>
         }
         control={<Checkbox checked={checked} onChange={onChange} />}
-        sx={{ flexDirection: "row-reverse" }}
+        sx={{
+          flexDirection: "row-reverse",
+          justifyContent: "space-between",
+          width: "100%",
+          margin: "0",
+        }}
       />
     </CustomCard>
   );
