@@ -6,17 +6,19 @@ import CustomCard from "../CustomCard";
 interface PaymentOptionCardProps {
   installments: string;
   value: string;
-  secondaryText: string;
+  benefit?: string;
+  highlight?: string;
   checked?: boolean;
   onChange?: () => void;
 }
 
 const PaymentOptionCard: React.FC<PaymentOptionCardProps> = ({
-  secondaryText,
   checked,
   onChange,
   installments,
   value,
+  benefit,
+  highlight,
 }) => {
   return (
     <CustomCard>
@@ -25,7 +27,8 @@ const PaymentOptionCard: React.FC<PaymentOptionCardProps> = ({
         label={
           <Box>
             <Typography variant="h6">{`${installments} ${value}`}</Typography>
-            <Typography variant="body2">{secondaryText}</Typography>
+            <Typography variant="h6">{`${benefit} `}</Typography>
+            <Typography variant="h6">{`${highlight} `}</Typography>
           </Box>
         }
         control={<Checkbox checked={checked} onChange={onChange} />}

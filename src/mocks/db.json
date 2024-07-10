@@ -6,7 +6,9 @@
       {
         "id": 1,
         "label": "1x",
-        "amount": "R$ 30.500,00"
+        "amount": "R$ 30.500,00",
+        "benefit": "Ganhe 3% de Cashback",
+        "highlight": "🤑 R$ 300,00 de volta no seu Pix na hora"
       },
       {
         "id": 2,
