@@ -1,9 +1,10 @@
 import "./App.css";
+import Header from "./components/ui/Header";
 
 function App() {
   return (
     <>
-      <p>teste</p>
+      <Header />
     </>
   );
 }
