@@ -4,17 +4,19 @@ import TopLabel from "../TopLabel";
 import CustomCard from "../CustomCard";
 
 interface PaymentOptionCardProps {
-  primaryText: string;
+  installments: string;
+  value: string;
   secondaryText: string;
   checked?: boolean;
   onChange?: () => void;
 }
 
 const PaymentOptionCard: React.FC<PaymentOptionCardProps> = ({
-  primaryText,
   secondaryText,
   checked,
   onChange,
+  installments,
+  value,
 }) => {
   return (
     <CustomCard>
@@ -22,7 +24,7 @@ const PaymentOptionCard: React.FC<PaymentOptionCardProps> = ({
       <FormControlLabel
         label={
           <Box>
-            <Typography variant="h6">{primaryText}</Typography>
+            <Typography variant="h6">{`${installments} ${value}`}</Typography>
             <Typography variant="body2">{secondaryText}</Typography>
           </Box>
         }
