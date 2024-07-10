@@ -7,8 +7,11 @@ import "./index.css";
 interface PaymentOptionCardProps {
   installments: string;
   value: string;
-  benefit?: string;
+  benefitPrefix?: string;
+  benefitPercentage?: string;
+  benefitSuffix?: string;
   highlight?: string;
+  highlightValue?: string;
   checked?: boolean;
   onChange?: () => void;
 }
@@ -18,8 +21,11 @@ const PaymentOptionCard: React.FC<PaymentOptionCardProps> = ({
   onChange,
   installments,
   value,
-  benefit,
+  benefitSuffix,
+  benefitPrefix,
+  benefitPercentage,
   highlight,
+  highlightValue,
 }) => {
   return (
     <CustomCard>
@@ -32,8 +38,16 @@ const PaymentOptionCard: React.FC<PaymentOptionCardProps> = ({
               <span className="label-monetary-text label-value">{`${value}`}</span>
             </div>
             <div className="flex-column">
-              <span className="label-benefit">{`${benefit} `}</span>
-              <span className="label-highlight">{`${highlight} `}</span>
+              <div className="benefit-container">
+                <span className="label-benefit">{`${benefitPrefix}`}</span>
+                <span className="label-benefit-percentage">{`${benefitPercentage} `}</span>
+                <span className="label-benefit">{`${benefitSuffix}`}</span>
+              </div>
+
+              <div className="highlight-container">
+                <span className="label-highlight-value">{`🤑 ${highlightValue} `}</span>
+                <span className="label-highlight">{`${highlight} `}</span>
+              </div>
             </div>
           </div>
         }

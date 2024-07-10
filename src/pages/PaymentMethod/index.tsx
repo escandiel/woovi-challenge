@@ -13,8 +13,11 @@ const PaymentMethod = () => {
       <PaymentOptionCard
         installments={firstInstallment.label}
         value={firstInstallment.amount}
-        benefit={firstInstallment.benefit}
+        benefitPrefix={firstInstallment.benefitPrefix}
+        benefitPercentage={firstInstallment.benefitPercentage}
+        benefitSuffix={firstInstallment.benefitSuffix}
         highlight={firstInstallment.highlight}
+        highlightValue={firstInstallment.highlightValue}
       />
     </>
   );
