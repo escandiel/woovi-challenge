@@ -16,12 +16,14 @@ const ConfirmPayment = () => {
 
   return (
     <>
-      <div className="flex-center title-container">
+      <div className="flex-center title-container-confirm-payment">
         <Title
           text={`João, pague a entrada de R$ ${payment.paymentInstallment} pelo Pix`}
         />
       </div>
-      <QRCode />
+      <div className="flex-center">
+        <QRCode />
+      </div>
     </>
   );
 };

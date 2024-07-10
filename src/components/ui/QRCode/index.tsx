@@ -1,8 +1,11 @@
+import qrcode from "../../../assets/qr-code.png";
+import "./index.css";
+
 const QRCode = () => {
   return (
     <>
       <div className="qr-code-container">
-        <img src="/assets/qrcode.png" alt="QR Code para pagamento" />
+        <img src={qrcode} alt="QR Code para pagamento" />
       </div>
     </>
   );
