@@ -1,5 +1,6 @@
 import { useLocation } from "react-router-dom";
 import Title from "../../components/ui/Title";
+import CreditCardForm from "../../components/ui/CreditCardForm";
 
 const CreditCardInstallments = () => {
   const location = useLocation();
@@ -17,11 +18,14 @@ const CreditCardInstallments = () => {
   const remainingInstallments = totalInstallments - 1;
 
   return (
-    <div className="flex-center title-container-confirm-payment">
-      <Title
-        text={`João, pague o restante em ${remainingInstallments}x no cartão`}
-      />
-    </div>
+    <>
+      <div className="flex-center title-container-confirm-payment">
+        <Title
+          text={`João, pague o restante em ${remainingInstallments}x no cartão`}
+        />
+      </div>
+      <CreditCardForm />
+    </>
   );
 };
 
