@@ -6,3 +6,10 @@
 .col-qrcode-container .MuiButton-icon {
   margin-left: 0;
 }
+
+.col-qrcode-container .MuiButtonBase-root {
+  text-transform: initial;
+  font-size: 18px;
+  font-family: var(--primary-font);
+  font-weight: var(--font-semi-bold);
+}
