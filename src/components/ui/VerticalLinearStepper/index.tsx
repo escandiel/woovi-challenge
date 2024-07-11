@@ -82,7 +82,9 @@ const VerticalLinearStepper: React.FC = () => {
           ))}
         </Stepper>
       </Box>
-      <TotalizerRow total={totalInstallments} />
+      <div className="totalizer-container">
+        <TotalizerRow total={totalInstallments} />
+      </div>
     </>
   );
 };

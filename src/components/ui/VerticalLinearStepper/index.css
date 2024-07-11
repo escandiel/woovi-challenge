@@ -1,7 +1,5 @@
 .vertical-linear-stepper-container {
   margin-top: 20px;
-  padding-bottom: 20px;
-  border-bottom: 2px solid var(--border-color);
 }
 
 .vertical-linear-stepper-container .MuiBox-root {

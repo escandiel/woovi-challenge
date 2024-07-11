@@ -1,14 +1,5 @@
 import React from "react";
-import Box from "@mui/material/Box";
-import Typography from "@mui/material/Typography";
-import { styled } from "@mui/system";
-
-const TotalContainer = styled(Box)({
-  display: "flex",
-  justifyContent: "space-between",
-  width: "100%",
-  marginTop: "16px",
-});
+import "./index.css";
 
 interface TotalizerRowProps {
   total: string;
@@ -16,10 +7,10 @@ interface TotalizerRowProps {
 
 const TotalizerRow: React.FC<TotalizerRowProps> = ({ total }) => {
   return (
-    <TotalContainer>
-      <Typography>Total</Typography>
-      <Typography className="installment-total">{total}</Typography>
-    </TotalContainer>
+    <div className="totalizer-row-container">
+      <span>CET: 0,5%</span>
+      <span className="installment-total">{total}</span>
+    </div>
   );
 };
 
