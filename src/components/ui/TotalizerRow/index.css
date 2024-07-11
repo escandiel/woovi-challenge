@@ -11,3 +11,9 @@
   border-left: 0;
   padding: 27px 0 20px 0;
 }
+
+.totalizer-cet {
+  font-family: var(--primary-font);
+  font-size: 14px;
+  font-weight: var(--font-semi-bold);
+}

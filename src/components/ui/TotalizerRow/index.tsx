@@ -8,7 +8,7 @@ interface TotalizerRowProps {
 const TotalizerRow: React.FC<TotalizerRowProps> = ({ total }) => {
   return (
     <div className="totalizer-row-container">
-      <span>CET: 0,5%</span>
+      <span className="totalizer-cet">CET: 0,5%</span>
       <span className="installment-total">{total}</span>
     </div>
   );
