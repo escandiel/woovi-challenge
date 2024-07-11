@@ -31,7 +31,9 @@ const ConfirmPayment = () => {
         <QRCodeButton text="Clique para copiar QR CODE" icon={CopyPasteIcon} />
       </div>
       <PaymentDueDate daysToAdd={7} />
-      <VerticalLinearStepper />
+      <div className="vertical-linear-stepper-container">
+        <VerticalLinearStepper />
+      </div>
     </>
   );
 };

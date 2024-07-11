@@ -1,4 +1,4 @@
-// import React from "react";
+import React from "react";
 import { useLocation } from "react-router-dom";
 import Box from "@mui/material/Box";
 import Stepper from "@mui/material/Stepper";
@@ -7,6 +7,7 @@ import StepLabel from "@mui/material/StepLabel";
 import StepContent from "@mui/material/StepContent";
 import Typography from "@mui/material/Typography";
 import CustomStepIcon from "../CustomStepIcon";
+import { styled } from "@mui/system";
 
 interface Installment {
   id: number;
@@ -20,6 +21,12 @@ interface Installment {
   highlightValue?: string;
 }
 
+const StepLabelContainer = styled(Box)({
+  display: "flex",
+  justifyContent: "space-between",
+  width: "100%",
+});
+
 const VerticalLinearStepper: React.FC = () => {
   const location = useLocation();
   const payment = location.state?.payment as Installment;
@@ -28,10 +35,9 @@ const VerticalLinearStepper: React.FC = () => {
     { length: parseInt(payment.label.replace("x", "")) },
     (_, index) => ({
       label:
-        index === 0
-          ? `1ª entrada no Pix`
-          : `${index + 1}ª parcela no cartão - ${payment.paymentInstallment}`,
-      description: index === 0 ? `1ª entrada no Pix` : "",
+        index === 0 ? "1ª entrada no Pix" : `${index + 1}ª parcela no cartão`,
+      value: index === 0 ? "" : payment.paymentInstallment,
+      description: index === 0 ? "1ª entrada no Pix" : "",
     })
   );
 
@@ -41,7 +47,10 @@ const VerticalLinearStepper: React.FC = () => {
         {steps.map((step, index) => (
           <Step key={step.label} completed={index === 0}>
             <StepLabel StepIconComponent={CustomStepIcon}>
-              {step.label}
+              <StepLabelContainer>
+                <Typography>{step.label}</Typography>
+                {step.value && <Typography>{step.value}</Typography>}
+              </StepLabelContainer>
             </StepLabel>
             <StepContent>
               <Typography color={index === 0 ? "textPrimary" : "textSecondary"}>

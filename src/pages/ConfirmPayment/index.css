@@ -2,3 +2,12 @@
   max-width: 350px;
   margin: 0 auto;
 }
+
+.vertical-linear-stepper-container .MuiBox-root {
+  max-width: none;
+}
+
+.vertical-linear-stepper-container .MuiStepLabel-label {
+  display: flex;
+  justify-content: space-between;
+}
