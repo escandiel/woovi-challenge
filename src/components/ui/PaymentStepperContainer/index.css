@@ -1,0 +1,28 @@
+.vertical-linear-stepper-container {
+  margin-top: 20px;
+}
+
+.vertical-linear-stepper-container .MuiBox-root {
+  max-width: none;
+}
+
+.vertical-linear-stepper-container .MuiStepLabel-label {
+  display: flex;
+  justify-content: space-between;
+}
+
+.vertical-linear-stepper-container .MuiStepConnector-line {
+  position: relative;
+  right: 5px;
+  border-left: 2px solid var(--border-color);
+}
+
+.vertical-linear-stepper-container .MuiStepLabel-root {
+  padding: 0;
+  position: relative;
+  top: 4px;
+}
+
+.vertical-linear-stepper-container .MuiStepConnector-root {
+  height: 16px;
+}

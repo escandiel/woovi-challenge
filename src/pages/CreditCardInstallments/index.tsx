@@ -1,9 +1,7 @@
 import { useLocation } from "react-router-dom";
 import Title from "../../components/ui/Title";
 import CreditCardForm from "../../components/ui/CreditCardForm";
-import UniqueIdentifier from "../../components/ui/UniqueIdentifier";
-import VerticalLinearStepper from "../../components/ui/VerticalLinearStepper";
-import TotalizerAccordion from "../../components/ui/TotalizerAccordion";
+import PaymentStepperContainer from "../../components/ui/PaymentStepperContainer";
 
 const CreditCardInstallments = () => {
   const location = useLocation();
@@ -28,12 +26,7 @@ const CreditCardInstallments = () => {
         />
       </div>
       <CreditCardForm />
-      {/* <UniqueIdentifier /> */}
-      <div className="vertical-linear-stepper-container">
-        <VerticalLinearStepper />
-        <TotalizerAccordion />
-        <UniqueIdentifier />
-      </div>
+      <PaymentStepperContainer />
     </>
   );
 };

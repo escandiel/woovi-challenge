@@ -8,6 +8,7 @@ import PaymentDueDate from "../../components/ui/PaymentDueDate";
 import VerticalLinearStepper from "../../components/ui/VerticalLinearStepper";
 import TotalizerAccordion from "../../components/ui/TotalizerAccordion";
 import UniqueIdentifier from "../../components/ui/UniqueIdentifier";
+import PaymentStepperContainer from "../../components/ui/PaymentStepperContainer";
 
 const ConfirmPayment = () => {
   const location = useLocation();
@@ -33,11 +34,7 @@ const ConfirmPayment = () => {
         <QRCodeButton text="Clique para copiar QR CODE" icon={CopyPasteIcon} />
       </div>
       <PaymentDueDate daysToAdd={7} />
-      <div className="vertical-linear-stepper-container">
-        <VerticalLinearStepper />
-        <TotalizerAccordion />
-        <UniqueIdentifier />
-      </div>
+      <PaymentStepperContainer />
     </>
   );
 };
