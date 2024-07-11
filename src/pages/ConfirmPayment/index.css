@@ -11,3 +11,8 @@
   display: flex;
   justify-content: space-between;
 }
+
+.vertical-linear-stepper-container .MuiStepConnector-line {
+  position: relative;
+  right: 4px;
+}
