@@ -18,5 +18,16 @@
 
 .vertical-linear-stepper-container .MuiStepConnector-line {
   position: relative;
-  right: 4px;
+  right: 5px;
+  border-left: 2px solid var(--connector-stepper-line);
+}
+
+.vertical-linear-stepper-container .MuiStepLabel-root {
+  padding: 0;
+  position: relative;
+  top: 4px;
+}
+
+.vertical-linear-stepper-container .MuiStepConnector-root {
+  height: 16px;
 }
