@@ -16,3 +16,8 @@
 .totalizer-accordion-container .MuiPaper-root {
   box-shadow: none;
 }
+
+.totalizer-accordion-span {
+  font-size: 16px;
+  font-weight: var(--font-extra-bold);
+}

@@ -42,7 +42,7 @@ export default function TotalizerAccordion() {
           aria-controls="panel2-content"
           id="panel2-header"
         >
-          <span>Como funciona?</span>
+          <span className="totalizer-accordion-span">Como funciona?</span>
         </AccordionSummary>
         <AccordionDetails>
           <p>
