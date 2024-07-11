@@ -6,6 +6,7 @@ import CopyPasteIcon from "../../components/ui/CopyPasteIcon";
 import "./index.css";
 import PaymentDueDate from "../../components/ui/PaymentDueDate";
 import VerticalLinearStepper from "../../components/ui/VerticalLinearStepper";
+import TotalizerAccordion from "../../components/ui/TotalizerAccordion";
 
 const ConfirmPayment = () => {
   const location = useLocation();
@@ -33,6 +34,7 @@ const ConfirmPayment = () => {
       <PaymentDueDate daysToAdd={7} />
       <div className="vertical-linear-stepper-container">
         <VerticalLinearStepper />
+        <TotalizerAccordion />
       </div>
     </>
   );

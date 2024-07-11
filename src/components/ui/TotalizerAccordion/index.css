@@ -1,0 +1,18 @@
+.totalizer-accordion-container .MuiButtonBase-root,
+.totalizer-accordion-container .MuiAccordionDetails-root {
+  padding-top: 20px;
+  border-bottom: 2px solid var(--border-color);
+  padding-left: 0;
+}
+
+.totalizer-accordion-container .MuiButtonBase-root {
+  min-height: 80px;
+}
+
+.totalizer-accordion-container .MuiAccordionDetails-root {
+  padding-top: 0;
+}
+
+.totalizer-accordion-container .MuiPaper-root {
+  box-shadow: none;
+}
