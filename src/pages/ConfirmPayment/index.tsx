@@ -4,6 +4,7 @@ import QRCode from "../../components/ui/QRCode";
 import QRCodeButton from "../../components/ui/QRCodeButton";
 import CopyPasteIcon from "../../components/ui/CopyPasteIcon";
 import "./index.css";
+import PaymentDueDate from "../../components/ui/PaymentDueDate";
 
 const ConfirmPayment = () => {
   const location = useLocation();
@@ -26,8 +27,9 @@ const ConfirmPayment = () => {
       </div>
       <div className="flex-column col-qrcode-container">
         <QRCode />
-        <QRCodeButton text="Copiar e Colar" icon={CopyPasteIcon} />
+        <QRCodeButton text="Clique para copiar QR CODE" icon={CopyPasteIcon} />
       </div>
+      <PaymentDueDate daysToAdd={7} />
     </>
   );
 };
