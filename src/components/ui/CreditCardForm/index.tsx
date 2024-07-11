@@ -1,77 +1,15 @@
-// import * as React from "react";
-// import Box from "@mui/material/Box";
-// import TextField from "@mui/material/TextField";
-// import MenuItem from "@mui/material/MenuItem";
-// import "./index.css";
-// import SubmitButton from "../SubmitButton";
-
-// export default function FormPropsTextFields() {
-//   const [installments, setInstallments] = React.useState("");
-
-//   const handleInstallmentsChange = (
-//     event: React.ChangeEvent<HTMLInputElement>
-//   ) => {
-//     setInstallments(event.target.value);
-//   };
-
-//   return (
-//     <Box
-//       component="form"
-//       sx={{
-//         "& .MuiTextField-root": { m: 1, width: "100%" },
-//         display: "flex",
-//         flexDirection: "column",
-//         alignItems: "center",
-//         padding: "20px",
-//       }}
-//       noValidate
-//       autoComplete="off"
-//     >
-//       <TextField required id="outlined-fullname" label="Nome completo" />
-//       <TextField required id="outlined-cpf" label="CPF" />
-//       <TextField required id="outlined-card-number" label="Número do cartão" />
-//       <Box sx={{ display: "flex", width: "100%" }}>
-//         <TextField
-//           required
-//           id="outlined-expiry"
-//           label="Vencimento"
-//           sx={{ width: "50%" }}
-//         />
-//         <TextField
-//           required
-//           id="outlined-cvv"
-//           label="CVV"
-//           sx={{ width: "50%" }}
-//         />
-//       </Box>
-//       <TextField
-//         required
-//         id="outlined-installments"
-//         select
-//         label="Parcelas"
-//         value={installments}
-//         onChange={handleInstallmentsChange}
-//       >
-//         <MenuItem value={1}>1x</MenuItem>
-//         <MenuItem value={2}>2x</MenuItem>
-//         <MenuItem value={3}>3x</MenuItem>
-//         <MenuItem value={4}>4x</MenuItem>
-//         <MenuItem value={5}>5x</MenuItem>
-//         <MenuItem value={6}>6x</MenuItem>
-//         <MenuItem value={7}>7x</MenuItem>
-//       </TextField>
-//       <SubmitButton />
-//     </Box>
-//   );
-// }
 import * as React from "react";
 import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
 import MenuItem from "@mui/material/MenuItem";
+import { useLocation } from "react-router-dom";
 import "./index.css";
 import SubmitButton from "../SubmitButton";
 
 export default function FormPropsTextFields() {
+  const location = useLocation();
+  const payment = location.state?.payment;
+
   const [installments, setInstallments] = React.useState("");
 
   const handleInstallmentsChange = (
@@ -79,6 +17,44 @@ export default function FormPropsTextFields() {
   ) => {
     setInstallments(event.target.value);
   };
+
+  const handleNameKeyPress = (event: React.KeyboardEvent<HTMLInputElement>) => {
+    const charCode = event.charCode;
+    if (!/[a-zA-Z\s]/.test(String.fromCharCode(charCode))) {
+      event.preventDefault();
+    }
+  };
+
+  const handleNumberKeyPress = (
+    event: React.KeyboardEvent<HTMLInputElement>
+  ) => {
+    const charCode = event.charCode;
+    if (!/[0-9]/.test(String.fromCharCode(charCode))) {
+      event.preventDefault();
+    }
+  };
+
+  const renderInstallmentOptions = () => {
+    if (!payment) return null;
+    const numInstallments = parseInt(payment.label.replace("x", ""));
+    const options = [];
+    for (let i = 1; i <= numInstallments - 1; i++) {
+      options.push(
+        <MenuItem key={i} value={i}>
+          {i}x - {payment.paymentInstallment}
+        </MenuItem>
+      );
+    }
+    return options;
+  };
+
+  if (!payment) {
+    return (
+      <div className="flex-center">
+        Erro: Nenhuma informação de pagamento disponível.
+      </div>
+    );
+  }
 
   return (
     <Box
@@ -88,7 +64,7 @@ export default function FormPropsTextFields() {
         "& .MuiOutlinedInput-root": { borderRadius: "8px" },
         display: "flex",
         flexDirection: "column",
-        gap: "20px",
+        gap: "28px",
         alignItems: "center",
         padding: "20px",
       }}
@@ -100,13 +76,24 @@ export default function FormPropsTextFields() {
         id="outlined-fullname"
         label="Nome completo"
         sx={{ m: 0 }}
+        inputProps={{ maxLength: 50 }}
+        onKeyPress={handleNameKeyPress}
       />
-      <TextField required id="outlined-cpf" label="CPF" sx={{ m: 0 }} />
+      <TextField
+        required
+        id="outlined-cpf"
+        label="CPF"
+        sx={{ m: 0 }}
+        inputProps={{ maxLength: 14 }}
+        onKeyPress={handleNumberKeyPress}
+      />
       <TextField
         required
         id="outlined-card-number"
         label="Número do cartão"
         sx={{ m: 0 }}
+        inputProps={{ maxLength: 16 }}
+        onKeyPress={handleNumberKeyPress}
       />
       <Box sx={{ display: "flex", width: "100%", gap: 1 }}>
         <TextField
@@ -114,12 +101,16 @@ export default function FormPropsTextFields() {
           id="outlined-expiry"
           label="Vencimento"
           sx={{ width: "50%", m: 0 }}
+          inputProps={{ maxLength: 5 }}
+          onKeyPress={handleNumberKeyPress}
         />
         <TextField
           required
           id="outlined-cvv"
           label="CVV"
           sx={{ width: "50%", m: 0 }}
+          inputProps={{ maxLength: 3 }}
+          onKeyPress={handleNumberKeyPress}
         />
       </Box>
       <TextField
@@ -131,13 +122,7 @@ export default function FormPropsTextFields() {
         onChange={handleInstallmentsChange}
         sx={{ m: 0 }}
       >
-        <MenuItem value={1}>1x</MenuItem>
-        <MenuItem value={2}>2x</MenuItem>
-        <MenuItem value={3}>3x</MenuItem>
-        <MenuItem value={4}>4x</MenuItem>
-        <MenuItem value={5}>5x</MenuItem>
-        <MenuItem value={6}>6x</MenuItem>
-        <MenuItem value={7}>7x</MenuItem>
+        {renderInstallmentOptions()}
       </TextField>
       <SubmitButton />
     </Box>
