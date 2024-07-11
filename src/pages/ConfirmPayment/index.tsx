@@ -5,9 +5,6 @@ import QRCodeButton from "../../components/ui/QRCodeButton";
 import CopyPasteIcon from "../../components/ui/CopyPasteIcon";
 import "./index.css";
 import PaymentDueDate from "../../components/ui/PaymentDueDate";
-import VerticalLinearStepper from "../../components/ui/VerticalLinearStepper";
-import TotalizerAccordion from "../../components/ui/TotalizerAccordion";
-import UniqueIdentifier from "../../components/ui/UniqueIdentifier";
 import PaymentStepperContainer from "../../components/ui/PaymentStepperContainer";
 
 const ConfirmPayment = () => {
