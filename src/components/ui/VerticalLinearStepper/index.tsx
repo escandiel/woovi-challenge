@@ -46,15 +46,14 @@ const VerticalLinearStepper: React.FC = () => {
     console.log("Payment details:", payment);
   }, [payment]);
 
-  const steps = Array.from(
-    { length: parseInt(payment.label.replace("x", "")) },
-    (_, index) => ({
-      label:
-        index === 0 ? "1ª entrada no Pix" : `${index + 1}ª parcela no cartão`,
-      value: index === 0 ? "0" : payment.paymentInstallment,
-      description: index === 0 ? "1ª entrada no Pix" : "",
-    })
-  );
+  const steps = Array.from({ length: numInstallments }, (_, index) => ({
+    label:
+      index === 0
+        ? `1ª entrada no Pix - ${payment.paymentInstallment}`
+        : `${index + 1}ª parcela no cartão - ${payment.paymentInstallment}`,
+    value: payment.paymentInstallment,
+    description: index === 0 ? "1ª entrada no Pix" : "",
+  }));
 
   return (
     <>
