@@ -1,6 +1,9 @@
 import { useLocation } from "react-router-dom";
 import Title from "../../components/ui/Title";
 import QRCode from "../../components/ui/QRCode";
+import QRCodeButton from "../../components/ui/QRCodeButton";
+import CopyPasteIcon from "../../components/ui/CopyPasteIcon";
+import "./index.css";
 
 const ConfirmPayment = () => {
   const location = useLocation();
@@ -21,8 +24,9 @@ const ConfirmPayment = () => {
           text={`João, pague a entrada de R$ ${payment.paymentInstallment} pelo Pix`}
         />
       </div>
-      <div className="flex-center">
+      <div className="flex-column col-qrcode-container">
         <QRCode />
+        <QRCodeButton text="Copiar e Colar" icon={CopyPasteIcon} />
       </div>
     </>
   );
