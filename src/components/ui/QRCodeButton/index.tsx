@@ -2,6 +2,7 @@ import React from "react";
 import Button from "@mui/material/Button";
 import { styled } from "@mui/system";
 import { SvgIconProps } from "@mui/material/SvgIcon";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const TertiaryButton = styled(Button)(() => ({
   backgroundColor: "var(--tertiary-color)",
@@ -26,11 +27,20 @@ const QRCodeButton: React.FC<QRCodeButtonProps> = ({
   icon: IconComponent,
   ...props
 }) => {
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  const handleButtonClick = () => {
+    navigate("/credit-card-installments", {
+      state: { payment: location.state?.payment },
+    });
+  };
   return (
     <TertiaryButton
       variant="contained"
       startIcon={<IconComponent />}
       {...props}
+      onClick={handleButtonClick}
     >
       {text}
     </TertiaryButton>
