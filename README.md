@@ -1,30 +1,19 @@
-# React + TypeScript + Vite
+# Woovi Code Challenge
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This repository contains the solution for the Woovi code challenge. The objective of this challenge is to implement the user interface as specified in the [Figma design](https://www.figma.com/design/hv1LgD7oNrtlmfWgKBG6PF/Woovi-Desafio-Front?t=04d6bBNLuvsLGxWq-0).
 
-Currently, two official plugins are available:
+## Technologies Used
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **React**: A JavaScript library for building user interfaces.
+- **TypeScript**: A typed superset of JavaScript that compiles to plain JavaScript.
+- **Material-UI**: React components for faster and easier web development.
+- **react-router-dom**: A collection of navigational components for React applications.
+- **Vite**: A build tool that provides a faster and leaner development experience for modern web projects.
 
-## Expanding the ESLint configuration
+### Deployment
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+The application is deployed and can be accessed at: [Deployed Application Link](https://woovi-challenge-sooty.vercel.app/)
 
-- Configure the top-level `parserOptions` property like this:
+### Figma Design
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+The UI design and specifications can be found in the [Figma design.](https://www.figma.com/design/hv1LgD7oNrtlmfWgKBG6PF/Woovi-Desafio-Front?node-id=0-1&t=04d6bBNLuvsLGxWq-0)
