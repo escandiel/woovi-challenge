@@ -3,6 +3,7 @@ import "./App.css";
 import Header from "./components/ui/Header";
 import PaymentMethod from "./pages/PaymentMethod";
 import ConfirmPayment from "./pages/ConfirmPayment";
+import Footer from "./components/ui/Footer";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         <Route path="/" element={<PaymentMethod />} />
         <Route path="/confirm-payment" element={<ConfirmPayment />} />
       </Routes>
+      <Footer />
     </BrowserRouter>
   );
 }
