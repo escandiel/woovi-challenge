@@ -6,28 +6,3 @@
 .col-qrcode-container .MuiButton-icon {
   margin-left: 0;
 }
-
-.vertical-linear-stepper-container .MuiBox-root {
-  max-width: none;
-}
-
-.vertical-linear-stepper-container .MuiStepLabel-label {
-  display: flex;
-  justify-content: space-between;
-}
-
-.vertical-linear-stepper-container .MuiStepConnector-line {
-  position: relative;
-  right: 5px;
-  border-left: 2px solid var(--connector-stepper-line);
-}
-
-.vertical-linear-stepper-container .MuiStepLabel-root {
-  padding: 0;
-  position: relative;
-  top: 4px;
-}
-
-.vertical-linear-stepper-container .MuiStepConnector-root {
-  height: 16px;
-}

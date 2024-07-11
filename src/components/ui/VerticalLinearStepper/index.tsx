@@ -5,9 +5,9 @@ import Stepper from "@mui/material/Stepper";
 import Step from "@mui/material/Step";
 import StepLabel from "@mui/material/StepLabel";
 import StepContent from "@mui/material/StepContent";
-import Typography from "@mui/material/Typography";
 import CustomStepIcon from "../CustomStepIcon";
 import { styled } from "@mui/system";
+import "./index.css";
 
 interface Installment {
   id: number;
@@ -48,14 +48,19 @@ const VerticalLinearStepper: React.FC = () => {
           <Step key={step.label} completed={index === 0}>
             <StepLabel StepIconComponent={CustomStepIcon}>
               <StepLabelContainer>
-                <Typography>{step.label}</Typography>
-                {step.value && <Typography>{step.value}</Typography>}
+                <span className="installment-label">{step.label}</span>
+                {step.value && (
+                  <span className="installment-value">{step.value}</span>
+                )}
               </StepLabelContainer>
             </StepLabel>
             <StepContent>
-              <Typography color={index === 0 ? "textPrimary" : "textSecondary"}>
+              <span
+                className="span-title"
+                color={index === 0 ? "textPrimary" : "textSecondary"}
+              >
                 {step.description}
-              </Typography>
+              </span>
             </StepContent>
           </Step>
         ))}
