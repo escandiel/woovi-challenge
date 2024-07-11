@@ -25,8 +25,8 @@ const PaymentDueDate: React.FC<PaymentDueDateProps> = ({ daysToAdd }) => {
 
   return (
     <div className="flex-center ">
-      <span className="flex-column">
-        Prazo de pagamento: <span>{dueDate}</span>
+      <span className="flex-column payment-due-date-text">
+        Prazo de pagamento: <span className="payment-due-date">{dueDate}</span>
       </span>
     </div>
   );
