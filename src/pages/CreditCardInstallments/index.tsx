@@ -1,6 +1,7 @@
 import { useLocation } from "react-router-dom";
 import Title from "../../components/ui/Title";
 import CreditCardForm from "../../components/ui/CreditCardForm";
+import UniqueIdentifier from "../../components/ui/UniqueIdentifier";
 
 const CreditCardInstallments = () => {
   const location = useLocation();
@@ -25,6 +26,7 @@ const CreditCardInstallments = () => {
         />
       </div>
       <CreditCardForm />
+      <UniqueIdentifier />
     </>
   );
 };
