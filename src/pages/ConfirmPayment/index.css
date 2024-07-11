@@ -3,6 +3,10 @@
   margin: 0 auto;
 }
 
+.col-qrcode-container .MuiButton-icon {
+  margin-left: 0;
+}
+
 .vertical-linear-stepper-container .MuiBox-root {
   max-width: none;
 }
