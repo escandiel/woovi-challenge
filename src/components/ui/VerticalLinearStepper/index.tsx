@@ -1,4 +1,4 @@
-import React from "react";
+// import React from "react";
 import { useLocation } from "react-router-dom";
 import Box from "@mui/material/Box";
 import Stepper from "@mui/material/Stepper";
@@ -23,14 +23,15 @@ interface Installment {
 const VerticalLinearStepper: React.FC = () => {
   const location = useLocation();
   const payment = location.state?.payment as Installment;
+
   const steps = Array.from(
     { length: parseInt(payment.label.replace("x", "")) },
     (_, index) => ({
-      label: index === 0 ? "1ª entrada no Pix" : `${index + 1}ª  no cartão`,
-      description:
+      label:
         index === 0
           ? `1ª entrada no Pix`
-          : `Valor da parcela: ${payment.paymentInstallment}`,
+          : `${index + 1}ª parcela no cartão - ${payment.paymentInstallment}`,
+      description: index === 0 ? `1ª entrada no Pix` : "",
     })
   );
 
