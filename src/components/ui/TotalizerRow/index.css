@@ -1,0 +1,19 @@
+.totalizer-row-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 16px;
+}
+
+.totalizer-container .totalizer-row-container {
+  border: 2px solid var(--border-color);
+  border-right: 0;
+  border-left: 0;
+  padding: 27px 0 20px 0;
+}
+
+.totalizer-cet {
+  font-family: var(--primary-font);
+  font-size: 14px;
+  font-weight: var(--font-semi-bold);
+}

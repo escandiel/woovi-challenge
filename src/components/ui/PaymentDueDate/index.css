@@ -1,0 +1,15 @@
+.payment-due-date-text {
+  font-size: 16px;
+  font-weight: var(--font-semi-bold);
+  color: var(--payment-due-date);
+  margin: 0;
+  text-align: center;
+}
+
+.payment-due-date {
+  font-size: 16px;
+  font-weight: var(--font-bold);
+  color: var(--primary-color);
+  margin: 0;
+  text-align: center;
+}

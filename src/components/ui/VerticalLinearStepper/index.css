@@ -1,0 +1,14 @@
+.installment-value,
+.installment-label {
+  color: var(--primary-color);
+  font-size: 18px;
+  font-family: var(--primary-font);
+}
+
+.installment-label {
+  font-weight: var(--font-semi-bold);
+}
+
+.installment-value {
+  font-weight: var(--font-extra-bold);
+}

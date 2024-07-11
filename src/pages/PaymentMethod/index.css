@@ -1,3 +1,61 @@
 .title-container {
-  margin: 0 0 32px 0;
+  margin: 0 0 6px 0;
+}
+
+.payment-option-card .top-label {
+  max-width: fit-content;
+  z-index: 2;
+  top: 14px;
+}
+
+.payment-option-card-container .MuiPaper-root {
+  margin: 0 0 40px 0;
+}
+.payment-option-list {
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  overflow: visible;
+}
+
+.payment-option-item {
+  display: flex;
+}
+
+.payment-option-item:nth-child(2) .MuiPaper-root {
+  border: 2px solid var(--border-color);
+  border-radius: 10px;
+  border-bottom: 0;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.payment-option-item .MuiPaper-root {
+  border: 2px solid var(--border-color);
+  border-bottom: 0;
+  min-height: 105px;
+}
+
+.payment-option-item:last-child .MuiPaper-root {
+  border: 2px solid var(--border-color);
+  border-top-left-radius: 0 !important;
+  border-top-right-radius: 0 !important;
+  border-radius: 10px;
+}
+
+.payment-option-item .MuiPaper-root:not(:last-child) {
+  border-bottom: 0;
+}
+
+.payment-option-list .top-label {
+  position: relative;
+  max-width: fit-content;
+  font-size: 18px;
+  top: 12px;
+  z-index: 2;
+}
+
+.payment-option-item.checked .MuiPaper-root {
+  border: 2px solid var(--secondary-color);
+  background-color: rgba(3, 214, 157, 0.01);
 }

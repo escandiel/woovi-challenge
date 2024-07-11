@@ -6,39 +6,50 @@
       {
         "id": 1,
         "label": "1x",
-        "amount": "R$ 30.500,00",
-        "benefit": "Ganhe 3% de Cashback",
-        "highlight": "🤑 R$ 300,00 de volta no seu Pix na hora"
+        "paymentInstallment": "R$ 30.500,00",
+        "benefitSuffix": "de Cashback ",
+        "benefitPercentage": "3% ",
+        "benefitPrefix": "Ganhe ",
+        "highlight": "de volta no seu Pix na hora",
+        "highlightValue": "🤑 R$ 300,00 "
       },
       {
         "id": 2,
         "label": "2x",
-        "amount": "R$ 18.250,00"
+        "paymentInstallment": "R$ 15.300,00",
+        "amount": "Total: R$ 30.600,00"
       },
       {
         "id": 3,
         "label": "3x",
-        "amount": "R$ 12.167,00"
+        "paymentInstallment": "R$ 10.196,66",
+        "amount": "Total: R$ 30.620,00"
       },
       {
         "id": 4,
         "label": "4x",
-        "amount": "R$ 9.125,00"
+        "paymentInstallment": "R$ 7.725,00",
+        "amount": "Total: R$ 30.900,00 ",
+        "highlight": "Melhor opção de parcelamento",
+        "highlightValue": "-3% de juros: "
       },
       {
         "id": 5,
         "label": "5x",
-        "amount": "R$ 7.300,00"
+        "paymentInstallment": "R$ 6.300,00",
+        "amount": "Total: R$ 31.500,00"
       },
       {
         "id": 6,
         "label": "6x",
-        "amount": "R$ 6.083,33"
+        "paymentInstallment": "R$ 5.283,33",
+        "amount": "Total: R$ 31.699,98"
       },
       {
         "id": 7,
         "label": "7x",
-        "amount": "R$ 5.214,29"
+        "paymentInstallment": "R$ 4.542,85",
+        "amount": "Total: R$ 31.800,00"
       }
     ]
   }

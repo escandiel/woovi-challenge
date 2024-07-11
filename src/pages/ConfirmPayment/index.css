@@ -1,0 +1,8 @@
+.col-qrcode-container {
+  max-width: 350px;
+  margin: 0 auto;
+}
+
+.col-qrcode-container .MuiButton-icon {
+  margin-left: 0;
+}

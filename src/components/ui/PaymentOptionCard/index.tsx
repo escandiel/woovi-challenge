@@ -1,37 +1,89 @@
 import React from "react";
-import { Typography, Checkbox, FormControlLabel, Box } from "@mui/material";
+import { FormControlLabel } from "@mui/material";
 import TopLabel from "../TopLabel";
 import CustomCard from "../CustomCard";
+import ListCard from "../ListCard";
+import CustomCheckbox from "../CustomCheckbox";
+import "./index.css";
 
 interface PaymentOptionCardProps {
   installments: string;
-  value: string;
-  benefit?: string;
+  paymentInstallment: string;
+  amount?: string;
+  benefitPrefix?: string;
+  benefitPercentage?: string;
+  benefitSuffix?: string;
   highlight?: string;
+  highlightValue?: string;
   checked?: boolean;
-  onChange?: () => void;
+  onChange?: (checked: boolean) => void;
+  useListCard?: boolean;
+  showLabel?: boolean;
+  label?: string;
 }
 
 const PaymentOptionCard: React.FC<PaymentOptionCardProps> = ({
+  installments,
+  paymentInstallment,
+  amount,
+  benefitPrefix,
+  benefitPercentage,
+  benefitSuffix,
+  highlight,
+  highlightValue,
+  useListCard,
+  showLabel,
+  label,
   checked,
   onChange,
-  installments,
-  value,
-  benefit,
-  highlight,
 }) => {
+  const handleCheckboxChange = (checked: boolean) => {
+    if (onChange) onChange(checked);
+  };
+
+  const CardComponent = useListCard ? ListCard : CustomCard;
+
   return (
-    <CustomCard>
-      <TopLabel label="Pix"></TopLabel>
+    <CardComponent className={checked ? "checked" : ""}>
+      {showLabel && <TopLabel label={label || "Pix"} />}
       <FormControlLabel
         label={
-          <Box>
-            <Typography variant="h6">{`${installments} ${value}`}</Typography>
-            <Typography variant="h6">{`${benefit} `}</Typography>
-            <Typography variant="h6">{`${highlight} `}</Typography>
-          </Box>
+          <div>
+            <div className="flex-start label-monetary">
+              <span className="label-monetary-text label-installments">
+                {installments}
+              </span>
+              <span className="label-monetary-text label-value">
+                {paymentInstallment}
+              </span>
+            </div>
+            {amount && (
+              <div className="amount-container">
+                <span className="amount-value">{amount}</span>
+              </div>
+            )}
+            <div className="flex-column">
+              {benefitPrefix && benefitPercentage && benefitSuffix && (
+                <div className="benefit-container">
+                  <span className="label-benefit">{benefitPrefix}</span>
+                  <span className="label-benefit-percentage">
+                    {benefitPercentage}
+                  </span>
+                  <span className="label-benefit">{benefitSuffix}</span>
+                </div>
+              )}
+              {highlight && highlightValue && (
+                <div className="highlight-container">
+                  <span className="label-highlight-value">{` ${highlightValue}`}</span>
+                  <span className="label-highlight">{highlight}</span>
+                </div>
+              )}
+            </div>
+          </div>
         }
-        control={<Checkbox checked={checked} onChange={onChange} />}
+        control={
+          <CustomCheckbox checked={checked} onChange={handleCheckboxChange} />
+        }
         sx={{
           flexDirection: "row-reverse",
           justifyContent: "space-between",
@@ -39,7 +91,7 @@ const PaymentOptionCard: React.FC<PaymentOptionCardProps> = ({
           margin: "0",
         }}
       />
-    </CustomCard>
+    </CardComponent>
   );
 };
 
