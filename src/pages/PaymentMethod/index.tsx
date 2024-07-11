@@ -24,7 +24,7 @@ const PaymentMethod = () => {
       setTimeout(() => {
         setLoading(false);
         navigate("/confirm-payment", { state: { payment: selectedPayment } });
-      }, 2000);
+      }, 1000);
     }
   };
 
