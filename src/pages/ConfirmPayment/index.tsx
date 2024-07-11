@@ -5,6 +5,7 @@ import QRCodeButton from "../../components/ui/QRCodeButton";
 import CopyPasteIcon from "../../components/ui/CopyPasteIcon";
 import "./index.css";
 import PaymentDueDate from "../../components/ui/PaymentDueDate";
+import VerticalLinearStepper from "../../components/ui/VerticalLinearStepper";
 
 const ConfirmPayment = () => {
   const location = useLocation();
@@ -30,6 +31,7 @@ const ConfirmPayment = () => {
         <QRCodeButton text="Clique para copiar QR CODE" icon={CopyPasteIcon} />
       </div>
       <PaymentDueDate daysToAdd={7} />
+      <VerticalLinearStepper />
     </>
   );
 };
