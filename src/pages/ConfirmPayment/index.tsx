@@ -7,6 +7,7 @@ import "./index.css";
 import PaymentDueDate from "../../components/ui/PaymentDueDate";
 import VerticalLinearStepper from "../../components/ui/VerticalLinearStepper";
 import TotalizerAccordion from "../../components/ui/TotalizerAccordion";
+import UniqueIdentifier from "../../components/ui/UniqueIdentifier";
 
 const ConfirmPayment = () => {
   const location = useLocation();
@@ -35,6 +36,7 @@ const ConfirmPayment = () => {
       <div className="vertical-linear-stepper-container">
         <VerticalLinearStepper />
         <TotalizerAccordion />
+        <UniqueIdentifier />
       </div>
     </>
   );
