@@ -6,6 +6,7 @@ import Step from "@mui/material/Step";
 import StepLabel from "@mui/material/StepLabel";
 import StepContent from "@mui/material/StepContent";
 import Typography from "@mui/material/Typography";
+import CustomStepIcon from "../CustomStepIcon";
 
 interface Installment {
   id: number;
@@ -25,13 +26,10 @@ const VerticalLinearStepper: React.FC = () => {
   const steps = Array.from(
     { length: parseInt(payment.label.replace("x", "")) },
     (_, index) => ({
-      label:
-        index === 0
-          ? "1ª entrada no Pix e 2ª no cartão"
-          : `Parcela ${index + 1}`,
+      label: index === 0 ? "1ª entrada no Pix" : `${index + 1}ª  no cartão`,
       description:
         index === 0
-          ? `1ª entrada no Pix e 2ª no cartão`
+          ? `1ª entrada no Pix`
           : `Valor da parcela: ${payment.paymentInstallment}`,
     })
   );
@@ -41,10 +39,8 @@ const VerticalLinearStepper: React.FC = () => {
       <Stepper activeStep={1} orientation="vertical">
         {steps.map((step, index) => (
           <Step key={step.label} completed={index === 0}>
-            <StepLabel>
-              {index === 0
-                ? "1ª entrada no Pix"
-                : `${index + 1}ª parcela no cartão`}
+            <StepLabel StepIconComponent={CustomStepIcon}>
+              {step.label}
             </StepLabel>
             <StepContent>
               <Typography color={index === 0 ? "textPrimary" : "textSecondary"}>
