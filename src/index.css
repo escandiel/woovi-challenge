@@ -16,6 +16,8 @@
 
 body {
   font-family: var(--primary-font);
+  max-width: 1260px;
+  margin: 0 auto;
 }
 
 .flex-center {
