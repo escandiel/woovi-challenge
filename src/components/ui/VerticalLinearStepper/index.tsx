@@ -48,13 +48,10 @@ const VerticalLinearStepper: React.FC = () => {
 
   const steps = Array.from({ length: numInstallments }, (_, index) => ({
     label:
-      index === 0
-        ? `1ª entrada no Pix - ${payment.paymentInstallment}`
-        : `${index + 1}ª parcela no cartão - ${payment.paymentInstallment}`,
+      index === 0 ? "1ª entrada no Pix" : `${index + 1}ª parcela no cartão`,
     value: payment.paymentInstallment,
     description: index === 0 ? "1ª entrada no Pix" : "",
   }));
-
   return (
     <>
       <Box sx={{ maxWidth: 400 }}>
